@@ -5,6 +5,7 @@
   "description": "My React boilerplate with custom linting",
   "license": "MIT",
   "dependencies": {
+    "enzyme": "3.7.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "6.0.0",
@@ -19,7 +20,6 @@
     "test": "react-scripts test",
     "lint": "eslint --debug src/",
     "lint:write": "eslint --debug src/ --fix",
-    "enzyme": "3.7.0",
     "prettier": "prettier --write src/**/*.js"
   },
   "husky": {
@@ -42,7 +42,8 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
-      "!src/**/index.js"
+      "!src/**/index.js",
+      "!src/store.js"
     ],
     "coverageThreshold": {
       "global": {
